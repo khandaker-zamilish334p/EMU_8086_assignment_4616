@@ -1,4 +1,3 @@
-;done by
 INCLUDE EMU8086.INC
 .MODEL SMALL
 .STACK 100H
@@ -163,7 +162,7 @@ MAIN PROC
         
     B2:
     PUSH PRICE[SI]
-    PUSH PRICE[SI+2]
+    ;PUSH PRICE[SI+2]
     POP PRICE[SI]
     POP PRICE[SI+2]
     PUSH IDX[SI]
@@ -251,7 +250,7 @@ MAIN PROC
         ;MOV AX, ITER
         CMP CX, ITER
         JB D1
-        
+        ;intentional error in line 165
         
         RET
         
